@@ -7,9 +7,9 @@ import hof.game.card.Event;
 
 public class GameMaster {
 	
-	public List<Event> event;
-	public List<Equipment> equipement;
-	public Event[][] map;
-	public int level;
+	private List<Event> event;
+	private List<Equipment> equipement;
+	private Event[][] map;
+	private int level;
 	
 }
