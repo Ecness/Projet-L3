@@ -1,22 +1,22 @@
 package hof.game.event;
 
+import java.util.ArrayList;
 import hof.game.card.Carte;
 
-public class Dice extends Carte{
+public class Choice extends Carte{ 
 	
 	String intro = "";
-	int limit = 0;
-	String[] texts = new String[2];
-	int[] results = new int[2];
+	ArrayList<String> Texts = new ArrayList<String>();
+	int[] results = new int[Texts.size()];
 	
 	//Getters & Setters
-
-	public int getLimit() {
-		return limit;
+	
+	public ArrayList<String> getTexts() {
+		return Texts;
 	}
 
-	public void setLimit(int limit) {
-		this.limit = limit;
+	public void setTexts(ArrayList<String> texts) {
+		Texts = texts;
 	}
 
 	public String getIntro() {
@@ -27,14 +27,6 @@ public class Dice extends Carte{
 		this.intro = intro;
 	}
 
-	public String[] getTexts() {
-		return texts;
-	}
-
-	public void setTexts(String[] texts) {
-		this.texts = texts;
-	}
-
 	public int[] getResults() {
 		return results;
 	}
@@ -43,6 +35,4 @@ public class Dice extends Carte{
 		this.results = results;
 	}
 	
-	
-
 }

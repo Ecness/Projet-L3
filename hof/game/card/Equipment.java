@@ -3,7 +3,7 @@ package hof.game.card;
 import hof.game.equipment.EnumEquipment;
 import hof.game.equipment.EquipmentChoose;
 
-public class Equipment extends Card {
+public class Equipment extends Carte {
 
 	private EquipmentChoose equipmentCard;
 

@@ -2,14 +2,30 @@ package hof.game.entity;
 
 import java.util.List;
 
+import hof.game.card.Carte;
 import hof.game.card.Equipment;
-import hof.game.card.Event;
 
 public class GameMaster {
 	
-	private List<Event> event;
 	private List<Equipment> equipement;
-	private Event[][] map;
+	private Carte[][] map;
 	private int level;
+
+	public GameMaster () {
+		
+		
+	}
+	
+	// génére le premier donjon.
+	void generation_tuto() {
+		
+	}
+	
+	//génére le donjon.
+	void generation_Donjon() {
+		
+	}
+	
+	
 	
 }
