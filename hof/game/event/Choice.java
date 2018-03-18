@@ -1,40 +1,39 @@
 package hof.game.event;
 
+
 import hof.game.card.Carte;
 
-public class Dice extends Carte{
+public class Choice extends Carte{
 	//Texte d'introduction de la carte
 	String intro = "";
-	//Limite a depasser au lancer de dés
-	int limit = 0;
-	//Textes de résultats Gagnant/Perdu
-	String[] texts = new String[2];
-	//Valeur des Resultats Gagnant/Perdu
-	int[] results = new int[2];
-	//Type de resultats Gagnant/Perdu
-	EnumResult[] typeresult = new EnumResult[2];
+	//Textes des choix
+	String[] Texts = new String[3];
+	//Resultats des choix
+	int[] results = new int[3];
+	//Type de resultats
+	EnumResult[] typeresult = new EnumResult[3];
 	//Texte de fin de la carte
 	String outro = "";
 
 	//Constructeur
-	public Dice(String nom, int id,EnumEvent type, String intro, int limit, String[] texts, int[] results,
-			EnumResult[] typeresult, String outro) {
+	public Choice(String nom, int id,EnumEvent type, String intro, String[] texts, int[] results,
+			EnumResult[] typeresult,String outro) {
 		super(nom, id,type);
 		this.intro = intro;
-		this.limit = limit;
-		this.texts = texts;
+		Texts = texts;
 		this.results = results;
 		this.typeresult = typeresult;
 		this.outro = outro;
 	}
 
 	//Getters & Setters
-	public int getLimit() {
-		return limit;
+
+	public String[] getTexts() {
+		return Texts;
 	}
 
-	public void setLimit(int limit) {
-		this.limit = limit;
+	public void setTexts(String[] texts) {
+		Texts = texts;
 	}
 
 	public String getIntro() {
@@ -43,14 +42,6 @@ public class Dice extends Carte{
 
 	public void setIntro(String intro) {
 		this.intro = intro;
-	}
-
-	public String[] getTexts() {
-		return texts;
-	}
-
-	public void setTexts(String[] texts) {
-		this.texts = texts;
 	}
 
 	public int[] getResults() {
@@ -77,7 +68,5 @@ public class Dice extends Carte{
 	public void setOutro(String outro) {
 		this.outro = outro;
 	}
-
-
 
 }

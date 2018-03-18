@@ -1,11 +1,9 @@
 package hof.game.event;
 
 public enum EnumEvent {
-	
 	Battle,
-	ActionChose,
+	Choice,
 	Dice,
-	CardChose;
-	
+	CardChoose;
 }
 

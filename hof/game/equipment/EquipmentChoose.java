@@ -2,82 +2,44 @@ package hof.game.equipment;
 
 public class EquipmentChoose {
 
-	// card type
-	private boolean equipementShield;
-	private boolean equipementWeapon;
-	private boolean equipementArmor;
-	private boolean equipementAccessorie;
-	
-	// effect
+	//Valeur d'attaque de l'equipement
 	private int attack;
+	//Valeur de defence de l'equipement
 	private int defence;
-	
+	//Type de l'equipement
+	private EnumEquipment type;
 	
 	public EquipmentChoose(EnumEquipment type, int attack, int defence) {
 		super();
-		
-		switch (type) {
-		case Shield:
-			
-			this.equipementShield = true;
-			this.equipementWeapon = false;
-			this.equipementArmor = false;
-			this.equipementAccessorie = false;
-			
-			this.attack = attack;
-			this.defence = defence;
-			
-			break;
-
-		case Weapon:
-			
-			this.equipementShield = false;
-			this.equipementWeapon = true;
-			this.equipementArmor = false;
-			this.equipementAccessorie = false;
-			
-			this.attack = attack;
-			this.defence = defence;
-			
-			break;
-		case Armor:
-	
-			this.equipementShield = false;
-			this.equipementWeapon = false;
-			this.equipementArmor = true;
-			this.equipementAccessorie = false;
-			
-			this.attack = attack;
-			this.defence = defence;
-			
-			break;
-	
-		case Accessorie:
-	
-			this.equipementShield = false;
-			this.equipementWeapon = false;
-			this.equipementArmor = false;
-			this.equipementAccessorie = true;
-			
-			this.attack = attack;
-			this.defence = defence;
-			
-			break;
-	
-		default:
-			
-			this.equipementShield = false;
-			this.equipementWeapon = false;
-			this.equipementArmor = false;
-			this.equipementAccessorie = false;
-			
-			this.attack = 0;
-			this.defence = 0;
-			
-			break;
-		}
+		this.attack = attack;
+		this.defence = defence;
+		this.type = type;
 		
 	}
 
+
+	public int getAttack() {
+		return attack;
+	}
+
+	public void setAttack(int attack) {
+		this.attack = attack;
+	}
+
+	public int getDefence() {
+		return defence;
+	}
+
+	public void setDefence(int defence) {
+		this.defence = defence;
+	}
+
+	public EnumEquipment getType() {
+		return type;
+	}
+
+	public void setType(EnumEquipment type) {
+		this.type = type;
+	}
 	
 }
